@@ -14,7 +14,7 @@ def do_forecast():
     final_model = ExponentialSmoothing(df['total_sales'],trend='mul',seasonal='mul',seasonal_periods=30).fit()
 
     ##Howmany period do you want forecast for the future.
-    forecast_predictions = final_model.forecast(60)
+    forecast_predictions = final_model.forecast(18)
 
     #train_data['total_sales'].plot(legend=True,label='TRAIN',figsize=(6,4))
     #test_data['total_sales'].plot(legend=True,label='TEST',figsize=(6,4))
