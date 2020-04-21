@@ -13,7 +13,7 @@ def do_forecast():
 
 
     ##mul = multiplicative , seasonal_period = row value in periods
-    fitted_model = ExponentialSmoothing(train_data['total_sales'],trend='mul',seasonal='mul',seasonal_periods=30).fit()
+    
     final_model = ExponentialSmoothing(df['total_sales'],trend='mul',seasonal='mul',seasonal_periods=30).fit()
 
     ##Howmany period do you want forecast for the future.
